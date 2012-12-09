@@ -1,0 +1,80 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+	
+	color: #678;
+	width: 1024px;
+	height: 100px;
+	margin: auto;
+}
+header h1{
+	color: white;
+	text-shadow: 2px 5px 2px black;
+}
+body{
+		background-color: #456;
+		
+}
+.maincontent{
+		background-color: #fafafa;
+		margin: auto;
+		minimum-height: 400px;
+		width: 1024px;
+		border-radius: 10px;
+		box-shadow: 2px 5px 2px black;
+		padding-left: 10px
+}
+
+#menubar{
+		width: 1024px;
+		height: 50px;
+		margin: auto;
+		background-color: #fafaf6;
+		border-radius: 10px;
+		box-shadow: 2px 5px 2px black;
+}
+#menubar ul{
+		list-style: none;
+}
+#menubar ul li{
+		float: left;
+		padding: 7px;
+		display: block;
+		color: brown;
+}
+#menubar ul li a{
+	padding: 5px 15px;
+	color:red;
+	border-radius:5px;
+}
+#menubar ul li a:hover{
+		transform: scale(1.5);
+		color: white;
+		background-color: black;
+
+}
+#commentbox{
+	width:370px;
+	height: 480px;
+	background-color: #def;
+	border-radius: 3px;
+	box-shadow: 1px 1px black;
+
+}
+
+h1{
+	color: brown;
+}
+h2{
+	color: grey;
+}
+h3{
+	color:brown;
+}
+h4{
+	color:#567;
+}
+h5{
+	color:#866
+}

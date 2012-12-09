@@ -1,0 +1,45 @@
+<%= render 'design' %>
+
+
+<div class="maincontent">
+<h2> Post Details </h2>
+<h3> Title:</h3>&nbsp&nbsp&nbsp&nbsp<%= @post.title %> </br>
+<h3> Details:</h3> &nbsp&nbsp&nbsp&nbsp<%= @post.description %>
+<hr>
+</br></br>
+<h4>Comments</h4>
+<% @post.comments.each do |comment| %>
+<h5> comment: &nbsp&nbsp <%= comment.body %> </h5>
+<h5>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	by: <%= comment.commenter%>  
+	>><%= time_ago_in_words(comment.created_at) %> ago </h5>
+
+	<h6> <%= link_to "delete comment",[comment.post, comment], :confirm => "Are you sure?", :method => :delete %></h6>
+<% end %>
+
+<div id="commentbox">
+<h3>Add a comment:</h3>
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+	
+
+
+
+<div>
+	<%= f.label :commenter %> </br>
+	<%= f.text_field :commenter %> </br>
+</div>
+
+<div>
+	<%= f.label :body %> </br>
+	<%= f.text_area :body %> </br>
+</div>
+
+<div>
+	<%= f.submit "comment" %>
+</div>
+<% end %>
+</div>
+
+</br> </br>
+<%= link_to "Back", :back %>
+</div>
