@@ -5,10 +5,12 @@
 <h1>My Blog</h1>
 <%= link_to "Add New Post", new_post_path%>
 <% @posts.each do |p| %>
+<div id = 'content'>
 <h2> <%= p.title%> </h2>
 
 <h5> <%= link_to "Read", post_path(p.id) %> || <%= link_to "Delete",post_path(p.id), :method => :delete, :confirm => "Are u sure you want to delete?" %> </h5>
 <hr>
+</div>
 <% end %>
 </div>
 
